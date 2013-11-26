@@ -12,7 +12,13 @@ d = os.path.split(__file__)[0]
     
 #for modName in files:
     #mod = __import__(modName, globals(), locals(), fromlist=['*'])
-for mod in importModules('', globals(), locals(), excludes=['Exporter']).values():
+
+from . import CSVExporter
+from . import ImageExporter
+from . import Matplotlib
+from . import PrintExporter
+from . import SVGExporter
+for mod in CSVExporter, ImageExporter, Matplotlib, PrintExporter, SVGExporter:
     if hasattr(mod, '__all__'):
         names = mod.__all__
     else:

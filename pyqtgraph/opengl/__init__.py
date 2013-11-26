@@ -21,8 +21,7 @@ from pyqtgraph import importAll
             #if hasattr(mod, k):
                 #globals()[k] = getattr(mod, k)
 
-importAll('items', globals(), locals())
-\
+from .items.all import *
 from .MeshData import MeshData
 ## for backward compatibility:
 #MeshData.MeshData = MeshData  ## breaks autodoc.

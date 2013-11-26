@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from pyqtgraph.pgcollections import OrderedDict
-from pyqtgraph import importModules
 import os, types
 from pyqtgraph.debug import printExc
 from ..Node import Node
@@ -66,7 +65,14 @@ def loadLibrary(reloadLibs=False, libPath=None):
     if reloadLibs:
         reload.reloadAll(libPath)
         
-    mods = importModules('', globals(), locals())
+    from . import common
+    from . import Display
+    from . import functions
+    from . import Operators
+    from . import Data
+    from . import Filters
+    mods = dict(common=common, Display=Display, functions=functions,
+        Operators=Operators, Data=Data, Filters=Filters)
     #for f in frozenSupport.listdir(libPath):
         #pathName, ext = os.path.splitext(f)
         #if ext not in ('.py', '.pyc') or '__init__' in pathName or '__pycache__' in pathName:
