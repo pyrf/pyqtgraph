@@ -177,8 +177,8 @@ def importAll(path, globals, locals, excludes=()):
             if hasattr(mod, k):
                 globals[k] = getattr(mod, k)
 
-importAll('graphicsItems', globals(), locals())
-importAll('widgets', globals(), locals(), excludes=['MatplotlibWidget', 'RemoteGraphicsView'])
+from graphicsItems.all import *
+from widgets.almost_all import *
 
 from .imageview import *
 from .WidgetGroup import *
