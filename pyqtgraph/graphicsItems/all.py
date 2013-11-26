@@ -14,10 +14,8 @@ from ArrowItem import *
 from ItemGroup import *
 from LabelItem import *
 from LegendItem import *
-from ViewBox.axisCtrlTemplate_pyqt import *
 from ViewBox.ViewBox import *
 from ViewBox.ViewBoxMenu import *
-from ViewBox.axisCtrlTemplate_pyside import *
 from ViewBox.__init__ import *
 from ScaleBar import *
 from AxisItem import *
@@ -32,8 +30,6 @@ from InfiniteLine import *
 from GraphItem import *
 from ImageItem import *
 from PlotItem.PlotItem import *
-from PlotItem.plotConfigTemplate_pyqt import *
-from PlotItem.plotConfigTemplate_pyside import *
 from HistogramLUTItem import *
 from GraphicsWidget import *
 from VTickGroup import *
