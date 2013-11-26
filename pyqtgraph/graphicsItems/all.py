@@ -16,7 +16,6 @@ from LabelItem import *
 from LegendItem import *
 from ViewBox.ViewBox import *
 from ViewBox.ViewBoxMenu import *
-from ViewBox.__init__ import *
 from ScaleBar import *
 from AxisItem import *
 from PlotDataItem import *
